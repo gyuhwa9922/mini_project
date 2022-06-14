@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>on hover</title>
+  <script defer type="text/javascript" src="script/jquery-3.6.0.min.js"></script>
+  <script defer type="text/javascript" src="script/index9.js?ver=1"></script>
+  <link rel="stylesheet" href="css/style9.css">
+</head>
+
+<body>
+  <div class="items">
+    <div class="item">
+      <img src="img/ice.png" alt="">
+      <div class="caption">
+        <h2>마녀2</h2>
+        <p>‘자윤’이 사라진 뒤, 정체불명의 집단의 무차별 습격으로 마녀 프로젝트가 진행되고 있는 ‘아크’가 초토화된다.
+          그곳에서 홀로 살아남은 ‘소녀’는 생애 처음 세상 밖으로 발을 내딛고
+          우연히 만난 ‘경희’의 도움으로 농장에서 지내며 따뜻한 일상에 적응해간다.
+          한편, ‘소녀’가 망실되자 행방을 쫓는 책임자 ‘장’과
+          마녀 프로젝트의 창시자 ‘백총괄’의 지령을 받고 제거에 나선 본사 요원 ‘조현’,
+          ‘경희’의 농장 소유권을 노리는 조직의 보스 ‘용두’와
+          상해에서 온 의문의 4인방까지
+          각기 다른 목적을 지닌 세력이 하나 둘 모여들기 시작하면서 ‘소녀’ 안에 숨겨진 본성이 깨어나는데…
+          <p></p>
+        <a id="r1">리뷰 작성</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="img/tired.png" alt="">
+      <div class="caption">
+        <h2>탑 건</h2>
+        <p>최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.
+          그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만
+          실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.
+          
+          매버릭의 지휘 아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자
+          매버릭은 자신이 가르친 동료들과 함께 마지막이 될지 모를 하늘 위 비행에 나서는데…
+        </p>
+        <p>이미지 교체는 너무 귀찮아</p>
+        <a id="r2">리뷰 작성</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="img/wayout.png" alt="">
+      <div class="caption">
+        <h2>버즈라이트이어</h2>
+        <p>미션 #1
+          나, 버즈 라이트이어.
+          인류 구원에 필요한 자원을 감지하고 현재 수많은 과학자들과 미지의 행성으로 향하고 있다.
+          이번 미션은 인류의 역사를 새롭게 쓸 것이라 확신한다.
+          
+          미션 #2
+          잘못된 신호였다.
+          이곳은 삭막하고 거대한 외계 생물만이 살고 있는 폐허의 땅이다.
+          나의 실수로 모두가 이곳에 고립되고 말았다.
+          모두를 구하기 위해서 모든 것을 제자리에 돌려 놔야 한다.
+          
+          미션 #3
+          실수를 바로잡기 위한 탈출 미션을 위해 1년의 준비를 마쳤다.
+          어쩌다 한 팀이 된 정예 부대와 이 미션을 수행할 예정이다.
+          우주를 집어삼킬 ‘저그’와 대규모 로봇 군사의 위협이 계속되지만
+          나는 절대 포기할 수 없다.
+          그런데… 여긴 또 어디지? 시간 속에 갇힌 건가?
+          </p>
+        <a id="r3">리뷰 작성</a>
+      </div>
+    </div>
+  </div>
+  <div id="m1" class="middle">
+    <form>
+      <h1>마녀2 리뷰 작성</h1>
+      <span class="star" id="ss1">
+        ★★★★★
+        <span>★★★★★</span>
+        <input type="range" oninput="drawStar(this)" value="1" step="0.5" min="0" max="5"id="star1">
+      </span><br>
+      <textarea id="mvreview1" name="mvreview1" placeholder="내용을 입력해주세요." onfocus="this.placeholder = ''"
+        onblur="this.placeholder= '내용을 입력해주세요'" maxlength="100"></textarea><br>
+      <button type="button" onclick="set_movie1()">등록</button>
+      <button type="button" onclick="movie_list[0].make_div()">리뷰 보기</button>
+    </form>
+  </div>
+  <div id="m2" class="middle">
+    <form>
+      <h1>탑 건 리뷰 작성</h1>
+      <span class="star" id="ss2">
+        ★★★★★
+        <span>★★★★★</span>
+        <input type="range" oninput="drawStar1(this)" value="1" step="0.5" min="0" max="5"id="star2">
+      </span><br>
+      <textarea id="mvreview2" name="mvreview2" placeholder="내용을 입력해주세요." onfocus="this.placeholder = ''"
+        onblur="this.placeholder= '내용을 입력해주세요'" maxlength="100"></textarea><br>
+      <button type ="button" onclick="set_movie2()">등록</button>
+      <button type ="button" onclick="movie_list[1].make_div()">리뷰 보기</button>
+    </form>
+  </div>
+  <div id="m3" class="middle">
+    <form>
+      <h1>버즈 라이트이어 리뷰</h1>
+      <span class="star" id="ss3">
+        ★★★★★
+        <span>★★★★★</span>
+        <input type="range" oninput="drawStar2(this)" value="1" step="0.5" min="0" max="5"id="star3">
+      </span><br>
+      <textarea id="mvreview3" name="mvreview3" placeholder="내용을 입력해주세요." onfocus="this.placeholder = ''"
+        onblur="this.placeholder= '내용을 입력해주세요'" maxlength="100"></textarea><br>
+      <button type ="button" onclick="set_movie3()">등록</button>
+      <button type ="button" onclick="movie_list[2].make_div()">리뷰 보기</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <!-- <div class="square">
+      <span></span>
+      <span></span>
+      <span></span>
+      <div>
+          <h2>평점:</h2>
+          <p>
+              리뷰내용
+          </p>
+      </div> -->
+  </div>
+  
+</body>
+
+</html>
